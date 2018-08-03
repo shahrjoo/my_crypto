@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug  3 14:23:04 2018
+#README
 
-@author: alishahrjoo
-"""
 
-'''
+Using this package, you can store your passwords and connection strings on your 
+local machine and avoid hardcoding them in your python scrips.
+it will save them into a file in your local machine.
+Use the get_crypto() functin to retreive and use your credentials in your code
+
 
 myc= my_crypto()
 
