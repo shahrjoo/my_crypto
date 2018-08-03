@@ -18,7 +18,7 @@ myc.add_crypto('sqlpassword,"yourpassword")
 
 ## Add an item (a dictionary)
 
-'''
+```
 config = {
     'host': 'localhost',
     'user': 'root',
@@ -26,8 +26,7 @@ config = {
     'dbname': 'databasename'
 }
 myc.add_crypto('postgress_connectionstring',config)
-'''
-
+```
 ## Add a connectionstring
 myc.add_crypto('mysql_connection',"mysql://root:password@127.0.0.1/dbName")
 
@@ -50,7 +49,7 @@ myc.add_crypto('password#1',"newpassword")
 myc.get_crypto('pass1')
 
 
-## Example using connectin string
+## Example for connectin string
 config = {
     'host': 'localhost',
     'user': 'root',
@@ -64,7 +63,7 @@ conn = pg.DB(**myc.get_crypto('postgress_connectionstring'))
  is the same as using the command below:
  conn = pg.DB(host="localhost", user="root", passwd="password", dbname="databasename")
 
-# Example using for using saved password
+## Example for password
 myc.add_crypto('localsql_admin_password',"password")
 
 import MySQLdb
