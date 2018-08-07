@@ -11,6 +11,7 @@ Use the get_crypto() functin to retreive and use your credentials in your code
 
 ## Initialize the class
 ```
+from my_crypto import my_crypto
 myc= my_crypto()
 ```
 
