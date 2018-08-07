@@ -6,6 +6,13 @@ local machine and avoid hardcoding them in your python scrips.
 it will save them into a file in your local machine.
 Use the get_crypto() functin to retreive and use your credentials in your code
 
+# Installations:
+```
+git clone https://github.com/shahrjoo/my_crypto
+cd my_crypto
+pip install .
+```
+
 # Examples:
 
 
