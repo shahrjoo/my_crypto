@@ -125,12 +125,19 @@ class my_crypto():
     def __update_gitignore(self,rootpath):
         '''add __datafilename to the .gitignore file'''
         gitignorepath = os.path.join(rootpath,'.gitignore')
-        if self.__datafilename not in open(gitignorepath).read():
-            with open(gitignorepath, "a") as myfile:
-                myfile.write(self.__datafilename)
-            print('>  .gitignore file updated.')
+        
+        if os.path.exists(gitignorepath):       
+            if self.__datafilename not in open(gitignorepath).read():
+                with open(gitignorepath, "a") as myfile:
+                    myfile.write(self.__datafilename)
+                print('>  .gitignore file updated.')
+            else:
+                print('>  .gitignore already updated')
         else:
-            print('>  .gitignore already updated')  
+            with open(gitignorepath, "w") as myfile:
+                myfile.write(self.__datafilename)
+            print('>  .gitignore file created and updated.')
+            
     
     def get_crypto(self,name):
         '''
