@@ -70,7 +70,6 @@ myc.get_crypto('pass1')
 
 ## Example for connectin string
 ```
-
 config = {
     'host': 'localhost',
     'user': 'root',
