@@ -92,12 +92,18 @@ class my_crypto():
 
     def print_crypto(self):
         '''print all the keys and values'''
+        if len(self.mycrypto)<1:
+            print('You hae not entered any record')
+            return
         for key in self.mycrypto.keys():
             print('_________________________________________________________')
             print(key + ' ---> ' + str(self.mycrypto[str(key)]))
 
     def print_keys(self):
         ''' print all the keys'''
+        if len(self.mycrypto)<1:
+            print('You hae not entered any record')
+            return
         for key in self.mycrypto.keys():
             print(key)
 
