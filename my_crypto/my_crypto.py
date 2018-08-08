@@ -5,12 +5,12 @@ Created on Wed Aug  1 11:15:49 2018
 
 @author: alishahrjoo
 
-Using this package, you can store your passwords and connection strings on your 
-local machine and avoid hardcoding them in your python scrips.
+Using this package, you can store passwords and connection strings on your 
+local machine and avoid hardcoding them in your python scripts.
 it will save them into a file in your local machine.
-Use the get_crypto() functin to retreive and use your credentials in your code
-
+Use the get_crypto() functin to retreive and use your credentials in your code.
 """
+
 import json
 import os.path
 import git
@@ -163,13 +163,35 @@ class my_crypto():
         else:
             print('>  There is not any history file saved. Add items to generate a new file.')
             self.mycrypto={}
-
-
-
-
-
-
-
+    
+    def backup_crypto(self):
+        '''
+        backup the crypto into a file
+        '''
+        filePath = input('Enter the backup file path: ')
+        if os.path.exists(filePath):
+            try:
+                with open(filePath, 'w') as f:
+                    json.dump(self.mycrypto, f)
+            except OSError as err:
+                print("Error Writing file: {0}".format(err))
+        else:
+            print('>  file path does not exist: %s' % filePath)
+            
+    def restore_crypto(self):
+        '''
+        restore the crypto from a backup file
+        '''
+        filePath = input('Enter the file to restore: ')
+        if os.path.exists(filePath):
+            try:
+                with open(self.__mydatafile) as f:
+                    self.mycrypto = json.load(f)
+            except OSError as err:
+                print("Error Reading File: {0}".format(err))        
+        else:
+            print('>  file path does not exist: %s' % filePath)
+            
 
 
 

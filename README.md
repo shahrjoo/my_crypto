@@ -1,12 +1,17 @@
 # README
 
 
-Using this package, you can store your passwords and connection strings on your 
-local machine and avoid hardcoding them in your python scrips.
-it will save them into a file in your local machine.
-Use the get_crypto() functin to retreive and use your credentials in your code
+my_crypto gets your passwords and connection strings or any 
+other text that you use oftenly in your code and store them in your local machine.
+using my_crypto you can avoid hardcoding passwords, connections strings and other 
+important information on your source code. Instead of hardcoding, you can use 
+get_crypt0() function in your code. 
 
-# Installations:
+you can use my_crypto in a local git repository or local folder. It will store 
+whatever you want as a key: value, store them on your local machine and retreive 
+them whenever you want.
+
+# Installation:
 ```
 git clone https://github.com/shahrjoo/my_crypto
 cd my_crypto
