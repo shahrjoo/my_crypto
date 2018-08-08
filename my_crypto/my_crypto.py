@@ -170,12 +170,15 @@ class my_crypto():
         '''
         filePath = input('Enter the backup file path: ')
         if os.path.exists(filePath):
+            print('File already exist')
+        elif os.access(os.path.dirname(filePath),os.W_OK):
             try:
                 with open(filePath, 'w') as f:
                     json.dump(self.mycrypto, f)
+                    print('backup file created')
             except OSError as err:
-                print("Error Writing file: {0}".format(err))
-        else:
+                print("Error Writing file: {0}".format(err))            
+        else:    
             print('>  file path does not exist: %s' % filePath)
             
     def restore_crypto(self):
@@ -185,8 +188,10 @@ class my_crypto():
         filePath = input('Enter the file to restore: ')
         if os.path.exists(filePath):
             try:
-                with open(self.__mydatafile) as f:
+                with open(filePath) as f:
                     self.mycrypto = json.load(f)
+                    self.__write_crypto()
+                    print('backup successfully restored')
             except OSError as err:
                 print("Error Reading File: {0}".format(err))        
         else:
