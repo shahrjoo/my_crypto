@@ -2,7 +2,7 @@
 
 
 my_crypto gets your passwords and connection strings or any 
-other text that you use oftenly in your code and store them in your local machine.
+other text that you use often in your code and store them in your local machine.
 By using my_crypto, you can avoid hardcoding passwords, connections strings and other 
 important information on your source code when you are implementing or validating your code. Instead of hardcoding, you can use 
 get_crypto() functions in your code. 
