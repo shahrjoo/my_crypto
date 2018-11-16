@@ -10,6 +10,7 @@ get_crypto() functions in your code.
 you can use my_crypto in a local git repository or local folder. It will store 
 whatever you want as a pair of key and value. It stores them on your local machine and retreive 
 them whenever you want.
+I would appreciate your comments.
 
 # Installation:
 ```
