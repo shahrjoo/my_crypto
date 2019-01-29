@@ -3,12 +3,12 @@
 
 my_crypto gets your passwords and connection strings or any 
 other text that you use often in your code and store them in your local machine.
-By using my_crypto, you can avoid hardcoding passwords, connections strings and other 
+By using my_crypto, you can avoid hardcoding passwords, connection strings and other 
 important information on your source code when you are implementing or validating your code. Instead of hardcoding, you can use 
 get_crypto() functions in your code. 
 
-you can use my_crypto in a local git repository or local folder. It will store 
-whatever you want as a pair of key and value. It stores them on your local machine and retreive 
+You can use my_crypto in a local git repository or local folder. It will store 
+whatever you want as a pair of key and value. my_crypto stores the data on your local machine and retreive 
 them whenever you want.
 I would appreciate your comments.
 
