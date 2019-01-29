@@ -30,10 +30,10 @@ myc= my_crypto()
 
 ## Add an item
 ```
-myc.add_crypto('password#1',"yourpassword")
+myc.add_crypto('password#1','yourpassword')
 ```
 ```
-myc.add_crypto('sqlpassword,"yourpassword")
+myc.add_crypto('sqlpassword,'yourpassword')
 ```
 ## Add an item (a dictionary)
 
@@ -48,7 +48,7 @@ myc.add_crypto('postgress_connectionstring',config)
 ```
 ## Add a connectionstring
 ```
-myc.add_crypto('mysql_connection',"mysql://root:password@127.0.0.1/dbName")
+myc.add_crypto('mysql_connection','mysql://root:password@127.0.0.1/dbName')
 ```
 
 ## The dictionary
@@ -73,7 +73,7 @@ myc.del_crypto('pass1')
 
 ## Update an item
 ```
-myc.add_crypto('password#1',"newpassword")
+myc.add_crypto('password#1','newpassword')
 ```
 
 ## Get an item value
